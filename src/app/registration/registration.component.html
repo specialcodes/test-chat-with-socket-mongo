@@ -1,0 +1,36 @@
+<mat-grid-list cols="12" rowHeight="300px">
+  <mat-grid-tile colspan="3" rowspan="2">
+  </mat-grid-tile>
+  <mat-grid-tile colspan="6" rowspan="3">
+    <div style="width: 100%;">
+      <h3>Please enter your informations</h3><br>
+      <form [formGroup]='form' (submit)="onSave()">
+        <mat-form-field appearance="fill">
+          <mat-label>Login</mat-label>
+          <input formControlName='login' #log matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input formControlName='password' #pass matInput>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input formControlName='name' #name matInput>
+        </mat-form-field>
+        <br>
+        <p>Image</p>
+        <input type="file" name='image' (change)="onInputChange($event)"> <br>
+        <div class="image-preview" *ngIf="imagePreview !== '' && imagePreview && form.get('image').valid">
+          <br><br><img width="150px" [src]="imagePreview" [alt]="form.value.image"> <br><br><br>
+        </div>
+        <br><br>
+
+        <button mat-stroked-button color="primary" type="submit">Registration</button>
+      </form>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="2">
+  </mat-grid-tile>
+</mat-grid-list>
