@@ -1,14 +1,153 @@
-<mat-grid-list *ngIf='!user' cols="12" rowHeight="100px">
-  <mat-grid-tile colspan="6" rowspan="2">
-    <button mat-stroked-button color="primary" routerLink='sign'>Sign</button>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="6" rowspan="2">
-    <button mat-stroked-button color="primary" routerLink='registration'>Registration</button>
-  </mat-grid-tile>
-</mat-grid-list>
+<!--<div class="container-fluid">
+  <div class="row carousel-container">
+    <div class="col-12">
+      <div id="demo" class="carousel slide" data-ride="carousel">
 
-<mat-grid-list *ngIf='user' cols="12" rowHeight="100px">
-  <mat-grid-tile colspan="12" rowspan="2">
-    <button mat-stroked-button color="primary" routerLink='user'>Start Chat</button>
-  </mat-grid-tile>
-</mat-grid-list>
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+       
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class='flexed-element-container'>
+             <div class="text col-12 col-md-6">
+               <h3><small>Welcome to Chatapp</small></h3>
+               <p class='justify-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores alias quas sequi facilis tempore deleniti ipsam omnis recusandae veniam obcaecati soluta, blanditiis cupiditate sint sit optio quae? Neque, ducimus.</p>
+               <div class="btn btn-dark">Enter chat room</div>
+             </div>
+
+             <div class="pic col-12 col-md-6">
+               <img src="..\..\assets\undraw_friends_online_klj6.png" alt="">
+             </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class='flexed-element-container'>
+             <div class="text col-12 order-md-2 col-md-6">
+               <h3><small>Find Someone who has the same interest as you</small></h3>
+               <p class='justify-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores alias quas sequi facilis tempore deleniti ipsam omnis recusandae veniam obcaecati soluta, blanditiis cupiditate sint sit optio quae? Neque, ducimus.</p>
+             </div>
+            
+             <div class="pic col-12 order-md-1 col-md-6">
+               <img src="..\..\assets\undraw_shared_goals_3d12.png" alt="representation of two people having same interest ">
+             </div>
+            </div>
+          </div>
+    
+           <div class="carousel-item">
+            <div class='flexed-element-container'>
+             <div class="text col-12 col-md-6">
+               <h3><small>Chat with strangers or friends online</small></h3>
+               <p class='justify-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores alias quas sequi facilis tempore deleniti ipsam omnis recusandae veniam obcaecati soluta, blanditiis cupiditate sint sit optio quae? Neque, ducimus.</p>
+             </div>
+
+             <div class="pic col-12 col-md-6">
+              <img src=" ..\..\assets\undraw_online_connection_6778.png" alt="representation of two people having online conversation ">
+             </div>
+            </div>
+          </div>
+    
+          <div class="carousel-item">
+            <div class='flexed-element-container'>
+             <div class="text col-12 order-md-2 col-md-6">
+               <h3><small>Register to Start conversations</small></h3>
+               <p class='justify-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est maiores alias quas sequi facilis tempore deleniti ipsam omnis recusandae veniam obcaecati soluta, blanditiis cupiditate sint sit optio quae? Neque, ducimus.</p>
+               <div class="btn border-success px-4 mr-2" routerLink='/login'> login </div>
+                <div class="btn btn-dark px-3" routerLink='/sign-up'> Sign up</div>
+             </div>
+
+             <div class="pic col-12 order-md-1 col-md-6">
+              <img src=" ..\..\assets\undraw_ideas_s70l.png" style='width:90%' alt="representation of human thinking">
+             </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    
+    </div>
+  </div>
+</div>-->
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="outer">
+        <div class="inner" id="animate">
+
+          <div class='flexed-element-container'>
+            <div class="text col-12 col-md-6">
+              <h3><small>Welcome to Chatapp</small></h3>
+              <p class='justify-center'>
+                A place to chat with strangers, make friends. Join random chat rooms and or create a public or private chat room. 
+              </p>
+              <div class="btn btn-dark mb-3" style='animation-duration: 3s;' routerLink='/chat-dashboard'>Enter chat room</div>
+            </div>
+
+            <div class="pic col-12 col-md-6">
+              <img src="..\..\assets\undraw_friends_online_klj6.png" alt="">
+            </div>
+          </div>
+
+          <div class='flexed-element-container'>
+            <div class="text col-12 order-md-2 col-md-6">
+              <h3><small>Find Someone who has the same interest as you</small></h3>
+              <p class='justify-center'>have a one to one chat with strangers who have same interest as you.</p>
+            </div>
+           
+            <div class="pic col-12 order-md-1 col-md-6">
+              <img src="..\..\assets\undraw_shared_goals_3d12.png" alt="representation of two people having same interest ">
+            </div>
+           </div>
+
+           <div class='flexed-element-container'>
+            <div class="text col-12 col-md-6">
+              <h3><small>Chat with strangers or friends online</small></h3>
+              <p class='justify-center'>talk to random person or have a private chat with your friends</p>
+            </div>
+
+            <div class="pic col-12 col-md-6">
+             <img src=" ..\..\assets\undraw_online_connection_6778.png" alt="representation of two people having online conversation ">
+            </div>
+           </div>
+           
+           <div class='flexed-element-container'>
+            <div class="text col-12 order-md-2 col-md-6 mb-3">
+              <h3><small>Register to Start conversations</small></h3>
+              <p class='justify-center'>click on Login to enter the chat dashboard or sign up button to register an account.</p>
+              <div class="btn border-success px-4 mr-2" routerLink='/login'> login </div>
+              <div class="btn btn-dark px-3" routerLink='/sign-up'> Sign up</div>
+            </div>
+
+            <div class="pic col-12 order-md-1 col-md-6">
+             <img src=" ..\..\assets\undraw_ideas_s70l.png" id='piclast' alt="representation of human thinking">
+            </div>
+           </div>
+         
+
+        </div>
+      </div>
+      
+      <!--<div class="scroll-notify-left">
+        <span><i class='fa fa-arrow-left text-dark'></i></span>
+      </div>
+      <div class="scroll-notify-right">
+         <span><i class="fa fa-arrow-right text-dark"></i></span>
+      </div>-->
+    </div>
+  </div>
+</div>
+  
+

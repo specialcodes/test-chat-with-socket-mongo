@@ -1,29 +1,48 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ChatComponent } from './user/chat/chat.component';
+import { NormalpagesComponent } from './normalpages/normalpages.component';
 import { HomeComponent } from './home/home.component';
-import { ChatroomComponent } from './user/chatroom/chatroom.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SignComponent } from './user/sign/sign.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { ProfileComponent } from './user/profile/profile.component';
-import { AuthGuard } from './shared/services/AuthService';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { ChatzoneComponent } from './chatzone/chatzone.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
+import { AuthGuard } from './auth.guard';
+import { MessageareaComponent } from './messagearea/messagearea.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CreateroomComponent } from './createroom/createroom.component';
+import { SearchroomsComponent } from './searchrooms/searchrooms.component';
+import { VerifyaccountComponent } from './verifyaccount/verifyaccount.component';
 
 
 const routes: Routes = [
-  {
-    path: '', component: NavbarComponent, children: [
-      { path: '', component: HomeComponent },
-      { path: 'sign', component: SignComponent },
-      { path: 'registration', component: RegistrationComponent },
-      { path: 'user', component: ChatComponent, canActivate: [AuthGuard] },
-      { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
-      { path: 'chat/:id', component: ChatroomComponent, canActivate: [AuthGuard] },
-      { path: '**', component: NotFoundComponent }
 
+  {
+    path: '', component: NormalpagesComponent, children: [
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'sign-up', component: SignupComponent },
+      { path: 'contact-us', component: ContactUsComponent },
+      { path: 'verify-account', component: VerifyaccountComponent }
     ]
   },
+
+  { path: 'home', redirectTo: '', component: HomeComponent },
+
+  {
+    path: 'chat-dashboard', component: ChatzoneComponent, canActivate: [AuthGuard], children: [
+      { path: '', component: ProfileComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'chat', component: ChatComponent },
+      { path: 'message-area', component: MessageareaComponent },
+      { path: 'view-profile', component: ViewProfileComponent },
+      { path: 'create-room', component: CreateroomComponent },
+      { path: 'search-room', component: SearchroomsComponent }
+    ]
+  },
+
+
 ];
 
 @NgModule({

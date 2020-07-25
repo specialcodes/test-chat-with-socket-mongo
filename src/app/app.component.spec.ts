@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'test-chat-with-socket-mongo'`, () => {
+  it(`should have as title 'chatapp'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('test-chat-with-socket-mongo');
+    expect(app.title).toEqual('chatapp');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('test-chat-with-socket-mongo app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('chatapp app is running!');
   });
 });

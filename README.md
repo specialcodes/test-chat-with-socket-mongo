@@ -1,6 +1,6 @@
-# TestChatWithSocketMongo
+# Chatapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
 
@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## things to work on
+carousel in home tutorial: https://www.w3schools.com/bootstrap4/bootstrap_ref_js_carousel.asp
+navigation: correct navigation bug.
+
+
+
+## Incase you get modules not found error :
+-> remove all the module address from angular.json build styles and scripts.
+-> remove the comments from index.html file.

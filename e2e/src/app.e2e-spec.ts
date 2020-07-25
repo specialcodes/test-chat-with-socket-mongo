@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('test-chat-with-socket-mongo app is running!');
+    expect(page.getTitleText()).toEqual('chatapp app is running!');
   });
 
   afterEach(async () => {

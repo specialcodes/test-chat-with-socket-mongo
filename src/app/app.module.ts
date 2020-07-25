@@ -1,69 +1,61 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { WebsocketService } from './shared/services/webSocketService';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignComponent } from './user/sign/sign.component';
-import { ChatroomComponent } from './user/chatroom/chatroom.component';
-import { ChatComponent } from './user/chat/chat.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ProfileComponent } from './user/profile/profile.component';
+import { HeaderComponent } from './header/header.component';
+import { NormalpagesComponent } from './normalpages/normalpages.component';
+import { SecondheaderComponent } from './secondheader/secondheader.component';
 import { HomeComponent } from './home/home.component';
-import { RegistrationComponent } from './registration/registration.component';
-import { AuthGuard } from './shared/services/AuthService';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
+import { ChatzoneComponent } from './chatzone/chatzone.component';
+import { ChatzonesidenavComponent } from './chatzonesidenav/chatzonesidenav.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ChatComponent } from './chat/chat.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MessageareaComponent } from './messagearea/messagearea.component';
+import { SocketIoModule, SocketIoConfig, Socket } from 'ngx-socket-io';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CreateroomComponent } from './createroom/createroom.component';
+import { SearchroomsComponent } from './searchrooms/searchrooms.component';
+import { VerifyaccountComponent } from './verifyaccount/verifyaccount.component';
 
 
+const config:SocketIoConfig = {url:"localhost:8000", options:{transports:['websocket','polling']}};
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { HttpClientModule } from '@angular/common/http';
-import { HttpModule } from '@angular/http';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatTableModule } from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatCardModule } from '@angular/material/card';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { NotFoundComponent } from './not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SignComponent,
-    ChatroomComponent,
-    ChatComponent,
-    NavbarComponent,
-    ProfileComponent,
+    HeaderComponent,
+    NormalpagesComponent,
+    SecondheaderComponent,
     HomeComponent,
-    RegistrationComponent,
-    NotFoundComponent
+    FooterComponent,
+    LoginComponent,
+    SignupComponent,
+    ChatzoneComponent,
+    ChatzonesidenavComponent,
+    ProfileComponent,
+    ChatComponent,
+    MessageareaComponent,
+    ViewProfileComponent,
+    ContactUsComponent,
+    CreateroomComponent,
+    SearchroomsComponent,
+    VerifyaccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
-    // HttpClientModule,
-    HttpModule,
-    MatSliderModule,
-    MatInputModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatGridListModule,
     FormsModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    SocketIoModule.forRoot(config)
   ],
-  providers: [
-    WebsocketService,
-    AuthGuard
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,153 @@
+
+.error {
+    color:red;
+}
+
+input.ng-valid{
+  border-left:3px solid green;    
+}
+
+input.ng-invalid{
+    border-left:3px solid red;
+}
+.container-fluid{
+    background:white;
+}
+
+.row{
+   
+    height:82vh;
+    padding:0;
+    overflow:hidden;
+   
+}
+
+.login-box{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+
+}
+
+.login-form-container{
+    
+    width:80%;
+    background:rgba(255,255,255,0.4);
+    text-align:center;
+    padding:40px 30px;
+    border-radius: 10px;
+    border-top:3px solid whitesmoke;
+    border-left:3px solid whitesmoke;
+    box-shadow: 5px 5px 9px rgba(0,0,0,0.1);
+    transform: scale(0.98);
+}
+
+
+.form-label{
+    padding:0px;
+}
+.form-group{
+    margin:0px;
+    padding:0px;
+}
+.heading{
+    letter-spacing: 2px ;
+}
+.picturebox{
+    height:100%;
+    padding:0;
+    display:flex;
+    align-items: center;
+}
+.picturebox .img{
+    
+    
+    overflow-y: hidden;
+ /*   background: #a8c0ff;  /* fallback for old browsers */
+  /*  background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+  /*  background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    
+
+}
+.picturebox .img img{
+    width:100%;
+    height:100%;
+    position:relative;
+    animation: float 4s infinite ease-in-out;
+}
+@keyframes float{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-5px)
+    }
+    75%{
+        transform:translateY(-5px)
+    }
+    99%{
+    
+    }
+}
+
+
+/*.form-label:focus, .form-control:active, .form-group:focus{
+    outline:none !important;
+    border:none;
+    box-shadow: unset;
+}*/
+input {
+    padding:3px 10px;
+    font-size:19px;
+    letter-spacing:1px;
+}
+button{
+    letter-spacing: 4px;
+    font-size:18px;
+}
+h2{
+    letter-spacing: 2px;
+    font-size:45px;
+    font-weight: normal;
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+}
+@media screen and (max-width:600px){
+    .login-form-container{
+        width:90%;
+    }
+    .row{
+        height:unset;
+        min-height:90vh;
+    }
+    .login-box{
+        padding:10px 0px;
+        height:100%;
+        order:1 !important;
+    }
+     .login-form-container{
+       margin-left:0px;
+       margin-right:0px;
+       border:none;
+        box-shadow: none;
+        width:100%;
+    }
+     .form-control {
+         width:100%;
+         border-radius: 5px;
+     }
+     .picturebox {
+         margin-top:50px;
+        order:0 !important;
+        position:relative;
+        left:-20px;
+       
+    }
+    .picturebox .img img{
+        animation:none;
+    }
+}
